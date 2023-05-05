@@ -1,5 +1,5 @@
 const URL_CRUD = "/api/admin/users/";
-const URL_ROLES = "/api/admin/users/roles";
+const URL_ROLES = "/api/admin/roles";
 
 const ROLES = getRoles();
 
@@ -153,7 +153,7 @@ async function getDeleteModalWindow(id){
     ROLES.then(rols => {
         fDelete.idDel.value = id;
         getPersonByID(id).then(person => {
-            for (let rol of rols) {
+            for (let rol of person.roles) {
                 let role = document.createElement('option');
                 role.setAttribute("value", rol.role)
                 role.text = rol.role.substring(5);

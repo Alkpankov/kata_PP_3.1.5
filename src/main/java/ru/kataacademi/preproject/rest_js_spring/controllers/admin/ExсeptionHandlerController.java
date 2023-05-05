@@ -1,4 +1,4 @@
-package ru.kataacademi.preproject.rest_js_spring.controllers;
+package ru.kataacademi.preproject.rest_js_spring.controllers.admin;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
