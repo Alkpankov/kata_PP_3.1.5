@@ -1,4 +1,4 @@
-const URL = "/api/auth";
+const URL = "/auth";
 
 getAuthPerson();
 

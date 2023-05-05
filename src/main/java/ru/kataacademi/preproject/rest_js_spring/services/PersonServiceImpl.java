@@ -7,7 +7,7 @@ import org.springframework.transaction.annotation.Transactional;
 import ru.kataacademi.preproject.rest_js_spring.models.Person;
 import ru.kataacademi.preproject.rest_js_spring.models.Role;
 import ru.kataacademi.preproject.rest_js_spring.repositories.PersonRepository;
-import ru.kataacademi.preproject.rest_js_spring.util.PersonNotFoundExeption;
+import ru.kataacademi.preproject.rest_js_spring.util.PersonNotFoundException;
 
 import java.util.HashSet;
 import java.util.List;
@@ -78,7 +78,7 @@ public class PersonServiceImpl implements PersonService {
     @Override
     public Person get(long id) {
         Optional<Person> person = personRepository.findById(id);
-        return person.orElseThrow(PersonNotFoundExeption::new);
+        return person.orElseThrow(PersonNotFoundException::new);
     }
 
 }

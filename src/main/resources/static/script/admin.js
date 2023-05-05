@@ -1,5 +1,5 @@
-const URL_CRUD = "/api/";
-const URL_ROLES = "/api/roles";
+const URL_CRUD = "/api/admin/users/";
+const URL_ROLES = "/api/admin/users/roles";
 
 const ROLES = getRoles();
 
